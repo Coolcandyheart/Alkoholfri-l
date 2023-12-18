@@ -5,28 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troejborg Bryg | Forside</title>
     <link rel="stylesheet" href="style.css">
+    <!-- font from google 'Cabin' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
 </head>
 <body>
   
     <header class="header" class="menuback">
         <img class="top" src="img/menuback.png" alt="">
         <nav>
-            <a href="index.html"><img  class="logo"  src="img/logo.png" alt=""></a>
+            <div class="desk-header" id="menudesk" >
+                <div class="desk-only">
+                    <a href="alkfrioel.html"><h2>Varer</h2></a>
+                </div>
+                <div class="desk-only">
+                    <a href="historie.html"><h2>Historie</h2></a>
+                </div>
+                <a class="logolink" href="index.html"><img  class="logo" src="img/logo.png" alt=""></a>
+                <div class="desk-only">
+                    <a href="underombygning.html"><h2>Kontakt</h2></a>
+                </div>
+                <div class="desk-only">
+                    <a href="underombygning.html"><h2>Om os</h2></a>
+                </div>  
+            </div>
             <!-- menu here trying -->
             <input class="menu-btn" type="checkbox" id="menu-btn" />
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
             <ul class="menu">
-                <li><a href="alkfrioel.html">Varer</a></li>
-                <li><a href="#about">Historie</a></li>
-                <li><a href="underombygning.html">Kontakt</a></li>
-                <li><a href="underombygning.html">Om os</a></li>
+                <li><a href="alkfrioel.html"><p>Varer</p></a></li>
+                <li><a href="historie.html"><p>Historie</p></a></li>
+                <li><a href="underombygning.html"><p>Kontakt</p></a></li>
+                <li><a href="underombygning.html"><p>Om os</p></a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <div class="forside">
-            <div>
+            <div class="top-adjust">
                 <img class="forside-img" src="img/forside1.png" alt="">
                 <h1 class="teskt">Velkommen</h1>
                 <p class="teskt">Hej og velkommen til Trøjborg Bryg. <br>
@@ -37,8 +55,8 @@
                 </p>
             </div>
             <div>
-                <h1 class="desk-only" class="teskt">Nyeste</h1>
-                <img class="desk-only" class="forside-img" src="img/cans/tropiskbliss2.png" alt="">
+                <h1 class="desk-only" class="teskt" id="top-adjust">Nyeste</h1>
+                <img class="desk-only" id="forside-img" src="img/cans/tropiskbliss2.png" alt="">
                 <img class="forside-img" src="img/forside2.png" alt="">
             </div>
         </div>
@@ -46,7 +64,7 @@
 
     <footer class="footer">
         <img class="bottom" src="img/footerback.png" alt="">
-        <div >
+        <div class="foot-content">
             <div class="kontaktinfo">
                 <h2>
                     Kontakt

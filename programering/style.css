@@ -140,9 +140,33 @@ table {
 
 /* ----------------------------  Slut reset --------------------------- */
 
+/* Font from google Cabin */
+
+
 /* All tekst */
 h1 {
+  font-family: 'Cabin', sans-serif;
   font-size: 40px;
+  color: black;
+  padding: 5px;
+}
+h2{
+  font-family: 'Cabin', sans-serif;
+  font-size: 23px;
+  padding: 7px;
+}
+p {
+  font-family: 'Cabin', sans-serif;
+  font-size: 16px;
+  padding: 3px;
+  line-height: 130%
+}
+
+.teskt {
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: center;
+  /* -webkit-text-stroke-width: 0.3px; */
 }
 
 /* bagground on all sites */
@@ -176,11 +200,24 @@ Header
   position: fixed;
 }
 
+/* remove styling from links */
+a {
+  text-decoration:none;
+  color:none
+}
+a:visited {
+  text-decoration: none;
+  color:none
+}
+
 /*
-I'm trying okay
+Code from class 'a BUGERMENU'
+noget er justeret
+
 */
 .header {
   position: fixed;
+  top: 0%;
   width: 100%;
   z-index: 3;
 }
@@ -198,16 +235,17 @@ I'm trying okay
   padding: 20px 20px;
   border-right: 1px solid #799F9E;
   text-decoration: none;
+  color: #150348
 }
 
 .header li a:hover,
 .header .menu-btn:hover {
   background-color: #777D89;
+  color: #150348
 }
 
 .header .logo {
   display: block;
-  float: left;
   font-size: 2em;
   padding: 10px 20px;
   text-decoration: none;
@@ -230,6 +268,7 @@ I'm trying okay
   padding: 28px 20px;
   position: relative;
   user-select: none;
+  margin-top: -75px;
 }
 
 .header .menu-icon .navicon {
@@ -267,7 +306,7 @@ I'm trying okay
 }
   
 .header .menu-btn:checked ~ .menu {
-  max-height: 240px;
+  max-height: 270px;
 }
   
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -304,25 +343,18 @@ forside content
   display: none;
 }
 
-.teskt {
-  margin-left: 15%;
-  margin-right: 15%;
-  text-align: center;
-  -webkit-text-stroke-width: 0.5px;
-  /* -webkit-text-stroke-color: white; */
-}
-
-
 /* 
 Foooter
 */
 .bottom {
   max-width: 100%;
-  height: auto;
+  height: 105%;
+  z-index: -2;
   position: absolute;
-  z-index: -1;
-}
-
+  bottom: 0;
+  left: 0;
+  right: 0;
+  }
 .face-insta {
   max-width: 15%;
   height: auto;
@@ -330,12 +362,11 @@ Foooter
 
 .footer{
   display: flex;
-  /* width: 100%; */
   flex-direction:column;
-  align-items: center;
   margin-top: 5%;
-    /* position: static;
-    bottom: 0; */
+
+  position: absolute;
+  width: 100%;
 }
 
 .kontaktinfo {
@@ -344,12 +375,15 @@ Foooter
   flex-direction:column;
   align-items: center;
   margin-bottom: 2%;
+  color: #150348
 }
 
 .Socials{
   display: flex;
   flex-direction:column;
   align-items: center;
+  padding: 10px;
+  color: #150348
 }
 
 /* 
@@ -402,21 +436,104 @@ alkohol køb og info side
   margin-bottom: 10px;
 }
 
+/* historie */
+.indhold {
+ padding-left: 25px;
+}
+
+
+/*
+under ombygning
+*/
+
+.underom{
+  margin-top: 250px;
+}
+
+/* making it so the top content on page isn't optructed by header */
+.top-adjust {
+  margin-top: 18%;
+}
+
 /* 48em = 768px */
 @media (min-width: 48em) {
-    .header li {
-        float: left;
-      }
-      .header li a {
-        padding: 20px 30px;
-      }
-      .header .menu {
-        clear: none;
-        float: right;
-        max-height: none;
-      }
-      .header .menu-icon {
-        display: none;
-      }
+  /* header adjustment */
+  .header .menu {
+    display: none;
+  }
+
+  .header .menu-icon {
+    display: none;
+  }
+
+  .desk-only {
+    display: block;
+  }
+
+  .desk-header{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+  }
+
+  .top {
+  height: 120px; 
+  width: 100%;
+  }
+
+  .logolink{
+    display: block;
+    width: 50%;
+    height: auto;
+    align-items:center;
+  }
+
+
+  #menudesk {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+ /* header adjustment end*/
+
+  /* footer adjustment */
+ .bottom {
+    width: 100%;
+    height: 150px
+  }
+
+  .footer{
+    align-items:center;
+  }
+  
+  .foot-content{
+    display: flex;
+    align-items:center;
+  }
+
+  /* footer adjustment end*/
+
+  /* forside */
+  .forside {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: min(95%, 45rem);
+    margin: 0 auto;
 
   }
+
+  
+  #forside-img{
+    max-width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #top-adjust{
+    margin-top: 18%;
+  }
+}
