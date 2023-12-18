@@ -159,12 +159,6 @@ body {
     z-index: -1;
 }
 
-.bottom {
-    max-width: 100%;
-    height: auto;
-    position: absolute;
-    z-index: -1;
-}
 
 .logo {
     max-width: 10%;
@@ -198,4 +192,20 @@ body {
     text-align: center;
     -webkit-text-stroke-width: 0.5px;
     /* -webkit-text-stroke-color: white; */
+}
+
+
+/* 
+Foooter
+*/
+.bottom {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+}
+
+.face-insta {
+    max-width: 10%;
+    height: auto;
 }
