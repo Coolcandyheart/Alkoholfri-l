@@ -100,104 +100,216 @@ hgroup,
 menu,
 nav,
 section {
-   display: block;
+  display: block;
 }
 
 body {
-   line-height: 1;
+  line-height: 1;
 }
 
 ol,
 ul {
-   list-style: none;
+  list-style: none;
 }
 
 blockquote,
 q {
-   quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-   content: '';
-   content: none;
+  content: '';
+  content: none;
 }
 
 table {
-   border-collapse: collapse;
-   border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 *,
 ::after::before {
-   margin: 0;
-   padding: 0;
-   border: 0;
-   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
-/* ---  Slut reset --- */
+/* ----------------------------  Slut reset --------------------------- */
 
+/* All tekst */
 h1 {
-    font-size: 40px;
+  font-size: 40px;
 }
 
+/* bagground on all sites */
 body {
-    overflow-x: hidden;
-    background: url(img/background.png);
-    background-size: 5%;
-    
-
+  overflow-x: hidden;
+  background: url(img/background.png);
+  background-size: 5%;
 }
 
 /* 
 Header 
 */
 .top {
-    max-width: 100%;
-    height: auto;
-    position: fixed;
-    z-index: -1;
+  max-width: 100%;
+  height: auto;
+  position: fixed;
+  z-index: -1;
 }
 
 
 .logo {
-    max-width: 10%;
-    z-index: 1;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 10px;
+  max-width: 10%;
+  z-index: 1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
 }
 
-.menu {
-    position: fixed;
+.menuback {
+  position: fixed;
 }
 
+/*
+I'm trying okay
+*/
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #799F9E;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #799F9E;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #777D89;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: black;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: black;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+  
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+  
 /* 
 forside content
 */
+
 .forside-img {
-    max-width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  max-width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .desk-only {
-    display: none;
+  display: none;
 }
 
 .teskt {
-    margin-left: 15%;
-    margin-right: 15%;
-    text-align: center;
-    -webkit-text-stroke-width: 0.5px;
-    /* -webkit-text-stroke-color: white; */
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: center;
+  -webkit-text-stroke-width: 0.5px;
+  /* -webkit-text-stroke-color: white; */
 }
 
 
@@ -205,34 +317,103 @@ forside content
 Foooter
 */
 .bottom {
-    max-width: 100%;
-    height: auto;
-    position: absolute;
-    z-index: -1;
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: -1;
 }
 
 .face-insta {
-    max-width: 15%;
-    height: auto;
+  max-width: 15%;
+  height: auto;
 }
 
 .footer{
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    margin-top: 5%;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  margin-top: 5%;
 }
 
 .kontaktinfo {
-    margin-top: 7%;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    margin-bottom: 2%;
+  margin-top: 7%;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  margin-bottom: 2%;
 }
 
 .Socials{
-    display: flex;
-    flex-direction:column;
-    align-items: center;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
 }
+
+/* 
+alkoholfri øl side
+*/
+.alkfrican{
+  max-width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.alk {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  text-align: center;
+}
+
+.cans {
+  margin-bottom: 30px;
+}
+
+/*
+alkohol køb og info side
+*/
+
+.canshop {
+  max-width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.specials {
+  display: flex;
+  justify-content:space-around
+}
+
+.greenicons {
+  max-width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* 48em = 768px */
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+      }
+      .header li a {
+        padding: 20px 30px;
+      }
+      .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+      }
+      .header .menu-icon {
+        display: none;
+      }
+
+  }
