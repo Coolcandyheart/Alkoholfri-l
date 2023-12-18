@@ -330,9 +330,12 @@ Foooter
 
 .footer{
   display: flex;
+  /* width: 100%; */
   flex-direction:column;
   align-items: center;
   margin-top: 5%;
+    /* position: static;
+    bottom: 0; */
 }
 
 .kontaktinfo {
