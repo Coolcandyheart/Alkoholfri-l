@@ -356,7 +356,7 @@ Foooter
   right: 0;
   }
 .face-insta {
-  max-width: 15%;
+  max-width: 70%;
   height: auto;
 }
 
@@ -364,7 +364,6 @@ Foooter
   display: flex;
   flex-direction:column;
   margin-top: 5%;
-
   position: absolute;
   width: 100%;
 }
@@ -436,6 +435,10 @@ alkohol køb og info side
   margin-bottom: 10px;
 }
 
+.visualiser-text{
+  margin-left: 10%;
+}
+
 /* historie */
 .indhold {
  padding-left: 25px;
@@ -448,6 +451,7 @@ under ombygning
 
 .underom{
   margin-top: 250px;
+  margin-bottom: 122px;
 }
 
 /* making it so the top content on page isn't optructed by header */
@@ -455,8 +459,20 @@ under ombygning
   margin-top: 18%;
 }
 
+
 /* 48em = 768px */
 @media (min-width: 48em) {
+  /* Background adjustment */
+  body{
+    background-size: 3%;
+  }
+  /* Background adjustment end*/
+
+  .teskt {
+  margin-left: 0%;
+  margin-right: 0%;
+  }
+
   /* header adjustment */
   .header .menu {
     display: none;
@@ -515,17 +531,26 @@ under ombygning
 
   /* forside */
   .forside {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+    margin: 0 auto; */
+    /* width: min(90%); */
+
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: min(95%, 45rem);
+    justify-content: space-around;
+    width: 70%;
     margin: 0 auto;
+  
 
   }
 
   
-  #forside-img{
-    max-width: 70%;
+  #forside-img {
+    object-fit:fill;
+    width: 30%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -533,7 +558,109 @@ under ombygning
     margin-bottom: 10px;
   }
 
+  .forside-img{
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
   #top-adjust{
-    margin-top: 18%;
+    margin-top: 20%;
+    text-align: center;
+  }
+
+  #phone-only {
+    display: none;
+  }
+
+  /* Jeg har virkelig prøvet på
+  at få forsiden til at fungere.
+  Problemet ligger i flexboxen i
+  at den ikke gider at lave de to
+  boxe samme størelse.
+  men den giver virkelig bare ikke
+  så har valgt at gå væk fra den og
+  gå videre til noget andet
+  */
+
+  /* Forside end */
+  
+  /* Varer */
+
+  .alk {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10%;
+  }
+
+  .alkfrican {
+    width: 60%;
+  }
+
+  .top-adjust{
+    margin-top:auto
+  }
+
+  /* varer slut */
+
+  /* historie */
+  #indhold{
+    margin-top: 10%;
+  }
+  .flex-1-2-hist{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+    margin: 0 auto;
+  }
+  #hsosf-hist{
+    max-width: 70%;
+    /* text-align: center; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #fordele-text{
+    max-width: 90%;
+  }
+  /* Samme problem som ved forsiden
+  Den første flexbox har er ikke lige store
+  men aner ikke hvordan jeg skal fikse det */
+
+  /* historie end */
+
+  /* indkøbs side tropisk øl */
+  .canflex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #canshop {
+    max-width:65%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .canshop{
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .please-work{
+    display: flex;
+    flex-direction: row;
+    margin-top: 125px;
+    align-items:flex-start;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .size-type{
+    display: flex;
+    justify-content:space-evenly
+  }
+
+  #visualiser{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
