@@ -203,11 +203,11 @@ Header
 /* remove styling from links */
 a {
   text-decoration:none;
-  color:none
+  color: #150348
 }
 a:visited {
   text-decoration: none;
-  color:none
+  color: #150348
 }
 
 /*
@@ -340,6 +340,10 @@ forside content
 }
 
 .desk-only {
+  display: none;
+}
+
+#forside-img {
   display: none;
 }
 
@@ -531,20 +535,11 @@ under ombygning
 
   /* forside */
   .forside {
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 70%;
-    margin: 0 auto; */
-    /* width: min(90%); */
-
-    display: flex;
+     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 70%;
     margin: 0 auto;
-  
-
   }
 
   
@@ -561,6 +556,16 @@ under ombygning
   .forside-img{
     margin-left: 0%;
     margin-right: 0%;
+  }
+
+  #forside-img2 {
+    object-fit:fill;
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   #top-adjust{
@@ -627,6 +632,11 @@ under ombygning
   /* Samme problem som ved forsiden
   Den første flexbox har er ikke lige store
   men aner ikke hvordan jeg skal fikse det */
+
+  /* Update, it fixed itself?
+  ved ikke hvorfor eller hvordan,
+  men hvis det går igen,
+  then you know why*/
 
   /* historie end */
 
